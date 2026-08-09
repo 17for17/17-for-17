@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>17 FOR 17 ♡</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+    :root {
+      --ivory: #fffaf4;
+      --cream: #f7eee3;
+      --gold: #b89455;
+      --dark-gold: #8c6a35;
+      --blush: #ead5d0;
+      --brown: #493d36;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--ivory);
+      color: var(--brown);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7%;
+      border-bottom: 1px solid #eadfce;
+      background: rgba(255, 250, 244, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--dark-gold);
+    }
+
+    nav a {
+      color: var(--brown);
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 70px 20px;
+      background:
+        radial-gradient(circle at top left, #f3e2dc 0, transparent 30%),
+        radial-gradient(circle at bottom right, #eee0c9 0, transparent 30%),
+        var(--ivory);
+    }
+
+    .crown {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(65px, 12vw, 135px);
+      line-height: 0.85;
+      color: var(--dark-gold);
+      margin: 18px 0;
+      letter-spacing: 4px;
+    }
+
+    .subtitle {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(22px, 4vw, 32px);
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      max-width: 580px;
+      margin: 0 auto 35px;
+      color: #6d625b;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .primary,
+    .secondary {
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-size: 14px;
+      transition: 0.25s;
+    }
+
+    .primary {
+      background: var(--gold);
+      color: white;
+    }
+
+    .secondary {
+      background: transparent;
+      color: var(--dark-gold);
+      border: 1px solid var(--gold);
+    }
+
+    .primary:hover,
+    .secondary:hover {
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 80px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 48px;
+      color: var(--dark-gold);
+      margin-bottom: 10px;
+    }
+
+    .section-text {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 45px;
+      color: #766b63;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .category {
+      background: var(--white);
+      border: 1px solid #eadfce;
+      border-radius: 18px;
+      padding: 30px 20px;
+      text-align: center;
+      transition: 0.25s;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(100, 75, 45, 0.08);
+    }
+
+    .category-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .category h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 27px;
+      color: var(--dark-gold);
+    }
+
+    .category p {
+      font-size: 13px;
+      color: #81766e;
+      margin-top: 5px;
+    }
+
+    .concierge {
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .concierge-box {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      border-radius: 25px;
+      padding: 45px 30px;
+      box-shadow: 0 10px 35px rgba(100, 75, 45, 0.07);
+    }
+
+    .question {
+      margin: 28px 0;
+      text-align: left;
+    }
+
+    .question h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 25px;
+      color: var(--dark-gold);
+      margin-bottom: 12px;
+    }
+
+    .option {
+      display: block;
+      width: 100%;
+      padding: 13px 16px;
+      margin: 8px 0;
+      border: 1px solid #e6d9ca;
+      background: #fffdf9;
+      border-radius: 12px;
+      text-align: left;
+      color: var(--brown);
+    }
+
+    .option:hover {
+      background: #f8eee5;
+      border-color: var(--gold);
+    }
+
+    #result {
+      display: none;
+      margin-top: 30px;
+      padding: 25px;
+      background: #faf1e8;
+      border-radius: 18px;
+    }
+
+    #result h3 {
+      font-family: "Cormorant Garamond", serif;
+      color: var(--dark-gold);
+      font-size: 30px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 45px 20px;
+      border-top: 1px solid #eadfce;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 20px;
+      color: var(--dark-gold);
+    }
+
+    .tiny {
+      font-family: "DM Sans", sans-serif;
+      font-size: 11px;
+      color: #9a8e85;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        padding: 18px 5%;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 12px;
+      }
+
+      section {
+        padding: 60px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">17 FOR 17 ♡</div>
+
+    <div>
+      <a href="#wishlist">Wishlist</a>
+      <a href="#concierge">Gift Concierge</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <div class="crown">♕</div>
+
+      <div class="eyebrow">January 30, 2027</div>
+
+      <h1>17 FOR 17</h1>
+
+      <div class="subtitle">
+        Seventeen little wishes for my seventeenth year.
+      </div>
+
+      <p class="intro">
+        Welcome, darling. ♡ If you've found your way here wondering
+        what you could possibly get me, I've made things a little easier.
+        Browse the wishlist or let the Gift Concierge help you find something.
+      </p>
+
+      <div class="buttons">
+        <a href="#concierge">
+          <button class="primary">♡ Find My Gift</button>
+        </a>
+
+        <a href="#wishlist">
+          <button class="secondary">♡ Explore My Wishlist</button>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section id="wishlist">
+    <h2 class="section-title">The Wishlist</h2>
+
+    <p class="section-text">
+      A little collection of things I'd love for my 17th.
+      Each category will eventually hold seventeen wishes. ♡
+    </p>
+
+    <div class="categories">
+
+      <div class="category">
+        <div class="category-icon">🎨</div>
+        <h3>Art</h3>
+        <p>17 little creative wishes</p>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">💄</div>
+        <h3>Beauty</h3>
+        <p>17 beauty wishes</p>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">👗</div>
+        <h3>Fashion</h3>
+        <p>17 things to wear</p>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">💍</div>
+        <h3>Jewelry</h3>
+        <p>17 pretty little things</p>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">📚</div>
+        <h3>Books & School</h3>
+        <p>17 useful wishes</p>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">🎧</div>
+        <h3>Tech</h3>
+        <p>17 little upgrades</p>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">🛏️</div>
+        <h3>Room & Décor</h3>
+        <p>17 dreamy additions</p>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">🍰</div>
+        <h3>Experiences</h3>
+        <p>17 memories to make</p>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">💕</div>
+        <h3>Little Things</h3>
+        <p>17 tiny joys</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="concierge" class="concierge">
+
+    <h2 class="section-title">Gift Concierge</h2>
+
+    <p class="section-text">
+      Not sure what to choose? Let the birthday girl help you. ♡
+    </p>
+
+    <div class="concierge-box">
+
+      <div class="question">
+        <h3>How close are you to the birthday girl?</h3>
+
+        <button class="option" onclick="chooseCloseness('new')">
+          ♡ We know each other
+        </button>
+
+        <button class="option" onclick="chooseCloseness('friend')">
+          ♡ We're friends
+        </button>
+
+        <button class="option" onclick="chooseCloseness('close')">
+          ♡ You're one of my people
+        </button>
+
+        <button class="option" onclick="chooseCloseness('family')">
+          ♡ You're basically family
+        </button>
+      </div>
+
+      <div class="question">
+        <h3>What's your gift mood?</h3>
+
+        <button class="option" onclick="chooseMood('small')">
+          🎀 A little something
+        </button>
+
+        <button class="option" onclick="chooseMood('medium')">
+          ✨ Something special
+        </button>
+
+        <button class="option" onclick="chooseMood('big')">
+          👑 I'm feeling generous
+        </button>
+
+        <button class="option" onclick="chooseMood('surprise')">
+          💌 Surprise me
+        </button>
+      </div>
+
+      <button class="primary" onclick="showResult()">
+        Find My Gift ♡
+      </button>
+
+      <div id="result">
+        <h3>Your Gift Zone ♡</h3>
+        <p id="resultText">
+          Choose your answers above and I'll help you find something lovely.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    Made with love for my seventeenth year ♡
+    <div class="tiny">17 FOR 17 • January 30, 2027</div>
+  </footer>
+
+  <script>
+    let closeness = "";
+    let mood = "";
+
+    function chooseCloseness(value) {
+      closeness = value;
+    }
+
+    function chooseMood(value) {
+      mood = value;
+    }
+
+    function showResult() {
+
+      const result = document.getElementById("result");
+      const text = document.getElementById("resultText");
+
+      if (!closeness || !mood) {
+        result.style.display = "block";
+        text.textContent =
+          "Almost there, darling ♡ Choose one answer from each question first.";
+        return;
+      }
+
+      if (mood === "surprise") {
+        text.textContent =
+          "Your best option: choose something from the Little Things, Experiences, or Beauty collection. You know the birthday girl well enough to surprise her. ♡";
+      } else if (mood === "small") {
+        text.textContent =
+          "Your gift zone: Little Things, Art, Books & School, or small Beauty wishes. Something thoughtful is perfect. 🎀";
+      } else if (mood === "medium") {
+        text.textContent =
+          "Your gift zone: Beauty, Fashion, Jewelry, Art, or Room & Décor. Something special would be lovely. ✨";
+      } else {
+        text.textContent =
+          "Your gift zone: explore the full wishlist and choose the thing that makes you think, 'Yep. That's SO her.' 👑";
+      }
+
+      result.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
